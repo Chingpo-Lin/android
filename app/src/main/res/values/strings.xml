@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="intent_test">intent test</string>
+    <string name="intent_text">Intent text</string>
+    <string name="implicit_intent_test">implicit intent test</string>
+    <string name="explicit_intent_test">explicit intent test</string>
+    <string name="this_is_explicit_intent">this is explicit intent</string>
+    <string name="this_is_implicit_intent">this is implicit intent</string>
+    <string name="intent_service">intent service</string>
+</resources>
