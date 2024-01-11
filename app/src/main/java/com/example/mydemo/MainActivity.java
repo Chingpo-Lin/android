@@ -2,6 +2,7 @@ package com.example.mydemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.mydemo.broadcast.NetworkReceiverActivity;
+import com.example.mydemo.frag.FragmentMainActivity;
 import com.example.mydemo.intent.ExplicitIntentTestActivity;
 import com.example.mydemo.service.FirstService;
 import com.example.mydemo.service.MyService;
@@ -58,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button getServiceDataButton;
     private Button unbindServiceButton;
     private Button bindServiceButton;
+    private Button broadcastButton;
+    private Button fragmentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindServiceButton = findViewById(R.id.service_bind_btn);
         unbindServiceButton = findViewById(R.id.service_unbind_btn);
         getServiceDataButton = findViewById(R.id.service_data_btn);
+        broadcastButton = findViewById(R.id.broadcast_btn);
+        fragmentButton = findViewById(R.id.fragment_btn);
 
         intentButton1.setOnClickListener(this);
         intentButton2.setOnClickListener(this);
@@ -77,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindServiceButton.setOnClickListener(this);
         unbindServiceButton.setOnClickListener(this);
         getServiceDataButton.setOnClickListener(this);
+        broadcastButton.setOnClickListener(this);
+        fragmentButton.setOnClickListener(this);
 
 
         Log.i(tag, "main activity create");
@@ -155,6 +164,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "get data" + text);
                 Toast.makeText(this, text, Toast.LENGTH_LONG).show();
             }
+        } else if (viewId == R.id.broadcast_btn) {
+            intent = new Intent(this, NetworkReceiverActivity.class);
+            startActivity(intent);
+        } else if (viewId == R.id.fragment_btn) {
+            intent = new Intent(this, FragmentMainActivity.class);
+            startActivity(intent);
         }
     }
 }

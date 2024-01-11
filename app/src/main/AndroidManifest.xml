@@ -13,6 +13,18 @@
         android:theme="@style/Theme.MyDemo"
         tools:targetApi="31">
         <activity
+            android:name=".frag.FragmentMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".broadcast.NetworkReceiverActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
             android:name=".intent.ExplicitIntentTestActivity"
             android:exported="false" />
 
@@ -30,10 +42,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="com.example.ACTION_CUSTOM" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
