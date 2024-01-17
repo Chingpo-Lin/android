@@ -19,6 +19,7 @@ import com.example.mydemo.frag.FragmentMainActivity;
 import com.example.mydemo.intent.ExplicitIntentTestActivity;
 import com.example.mydemo.service.FirstService;
 import com.example.mydemo.service.MyService;
+import com.example.mydemo.ui.xiaomi.XiaomiAccountCenterActivity;
 
 //注意事项：
 //资源回收:在 Activity 的生命周期结束时，确保释放资源、取消网络请求、注销监听器等操作，以防止 内存泄漏。
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bindServiceButton;
     private Button broadcastButton;
     private Button fragmentButton;
+    private Button xiaomiAccountButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getServiceDataButton = findViewById(R.id.service_data_btn);
         broadcastButton = findViewById(R.id.broadcast_btn);
         fragmentButton = findViewById(R.id.fragment_btn);
+        xiaomiAccountButton = findViewById(R.id.xiaomi_account_btn);
 
         intentButton1.setOnClickListener(this);
         intentButton2.setOnClickListener(this);
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getServiceDataButton.setOnClickListener(this);
         broadcastButton.setOnClickListener(this);
         fragmentButton.setOnClickListener(this);
+        xiaomiAccountButton.setOnClickListener(this);
 
 
         Log.i(tag, "main activity create");
@@ -169,6 +173,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (viewId == R.id.fragment_btn) {
             intent = new Intent(this, FragmentMainActivity.class);
+            startActivity(intent);
+        } else if (viewId == R.id.xiaomi_account_btn) {
+            intent = new Intent(this, XiaomiAccountCenterActivity.class);
             startActivity(intent);
         }
     }

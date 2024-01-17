@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyDemo"
         tools:targetApi="31">
         <activity
+            android:name=".ui.xiaomi.XiaomiAccountCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TextViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".frag.FragmentMainActivity"
             android:exported="false" />
         <activity

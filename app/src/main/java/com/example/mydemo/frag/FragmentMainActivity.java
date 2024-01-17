@@ -11,8 +11,6 @@ import com.example.mydemo.R;
 import com.example.mydemo.frag.fragment.NewsDetailFragment;
 import com.example.mydemo.frag.fragment.NewsFragment;
 
-import entity.News;
-
 public class FragmentMainActivity extends AppCompatActivity implements NewsFragment.OnNewsItemSelectedListener {
 
     private final String TAG = "Fragment Main";

@@ -1,4 +1,4 @@
-package entity;
+package com.example.mydemo.entity;
 
 public class News {
 

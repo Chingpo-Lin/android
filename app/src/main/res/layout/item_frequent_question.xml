@@ -1,0 +1,24 @@
+<!-- item_recycler_view.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- 这里放置每个 RecyclerView Item 的布局 -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="16dp"
+        android:text="Item Content"/>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/baseline_keyboard_arrow_right_24"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

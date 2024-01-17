@@ -1,0 +1,45 @@
+<!-- res/layout/item_layout.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/account_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/gray"
+        app:cardCornerRadius="36dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_key_24"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:gravity="center"
+                android:textColor="@color/light_gray"
+                android:text="@string/item_text"/>
+
+            <!-- Add more views or layouts as needed -->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -11,7 +11,7 @@ import com.example.mydemo.R;
 
 import java.util.List;
 
-import entity.News;
+import com.example.mydemo.entity.News;
 
 public class NewsAdapter extends BaseAdapter {
 

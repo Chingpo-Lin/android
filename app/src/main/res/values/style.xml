@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- xiaomi账号中心字的左边margin -->
+    <style name="xiaomi_account_left_margin">
+        <item name="android:layout_marginLeft">36dp</item> <!-- 设置背景颜色为绿色 -->
+    </style>
+
+    <style name="MyTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/holo_blue_light</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabSelectedTextColor">@android:color/holo_blue_light</item>
+    </style>
+
+</resources>
